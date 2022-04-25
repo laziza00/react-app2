@@ -1,14 +1,4 @@
-// class Square {
-//     constructor(_width) {
-//         this.width = _width;
-//         this.height = _width
-//     }
-//     get area(){
-//         return (this.width / this.width)/2;
-//     }
-// }
-// let square1 = new Square(25)
-// console.log(square1.area);
+
 
 let inputName = document.querySelector('.nameinput')
 let inputEamil = document.querySelector('.email')
@@ -81,7 +71,6 @@ function addItems(newArr) {
         </button>
 `
             box__list.appendChild(li)
-            console.log(box__list);
     })
 
     
@@ -146,11 +135,8 @@ function deleteItems(elId) {
 }
 
 
-
-
 inputName.addEventListener('keyup', (e) => {
     let userNameValue = inputName.value.trim().toLowerCase()
-  
 
     try{
          if(userNameValue.match(/[a-z]/) !=null && userNameValue.match(/[!@#$%^&*]/)==null && userNameValue!= "" && userNameValue.match(/[0-9]/) ==null) {
@@ -171,7 +157,7 @@ inputName.addEventListener('keyup', (e) => {
 
 inputEamil.addEventListener('keyup', (e) => {
 
-    let emailValue = inputEamil.value.trim()
+    let emailValue = inputEamil.value.trim().toLowerCase()
 try {
         if(emailValue.includes("@")  && emailValue !="" || emailValue.match(/[0-9]/) !=null ) {
 
@@ -207,4 +193,36 @@ inputNumber.addEventListener('keyup', (e) => {
     }catch(e) {
          boxText3.innerHTML = e
 }
+})
+
+
+let headerInput = document.querySelector('.header__input')
+let box__addInput = document.querySelector('.box__add-input')
+
+headerInput.addEventListener('keyup', ()=> {
+
+    let inputText = headerInput.value.toLowerCase()
+    let itemTextItem = document.querySelectorAll('.box__item-name');
+
+    itemTextItem.forEach((item)=> {
+        if(item.firstChild.textContent.toLocaleLowerCase().includes(inputText)) {
+            item.parentNode.style.display =""
+        }else {
+            item.parentNode.style.display ="none"
+        }
+    })
+})
+
+box__addInput.addEventListener('keyup', ()=> {
+    let inputText = box__addInput.value.toLowerCase()
+    let itemTextItem = document.querySelectorAll('.box__item-name');
+
+    itemTextItem.forEach((item)=> {
+        if(item.firstChild.textContent.toLocaleLowerCase().
+   includes(inputText)) {
+            item.parentNode.style.display =""
+        }else {
+            item.parentNode.style.display ="none"
+        }
+    })
 })
