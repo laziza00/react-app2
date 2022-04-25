@@ -6,14 +6,227 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  <!-- <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"> -->
   <link rel="stylesheet" href="css/col.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
+<!--=== bismiillah====== -->
+<div class="box">
+  <div class="box__fio col-xl-3"></div>
+  <div class="box__main col-xl-9">
+    <div class="container">
+      <div class="box__body">
+        <div class="box__header">
+          <form action="#" class="form header__input-box">
+            <button class="box__input-btn">
+              <i class='bx bx-search'></i>
+            </button>
+            <input class="header__input" type="search" placeholder="Search topics">
+          </form>
+          <div>
+            <button class="box__btn-head">
+              <i class='bx bx-bell' ></i>
+            </button>
+            <button class="box__btn-head">
+              <i class='bx bx-message' ></i>
+            </button>
+            <button class="box__btn-head">
+              <i class='bx bx-bullseye'></i>
+            </button>
+          </div>
+        </div>
+        <div class="box__parent">
+          <div class="box__user-box">
+            <div class="box__img-box">
+              <i class='bx bx-user'></i>
+            </div>
+            <div class="box__user-text">
+              <p class="box__title">New Employee </p>
+              <p class="box__text">Form design with validation</p>
+            </div>
+          </div>
+          <div class="box__form-box">
+            <div class="box__form-inner">
+            <div class="box__form">
+              <form action="#" class="box__add-form">
+                <button class="box__input-btn other-btn">
+                  <i class='bx bx-search'></i>
+                </button>
+                <input type="search" placeholder="Search Employees" class="box__add-input">
+         
+              </form>
+              <button class="box__add-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                <i class='bx bx-plus'></i>Add New</button>
+            </div>
+            <div class="box__btns">
+              <button>employee name <i class='bx bx-up-arrow-alt'></i></button>
+              <button>email adress (personal) <i class='bx bx-up-arrow-alt'></i></button>
+              <button>mobile number <i class='bx bx-up-arrow-alt'></i></button>
+              <button>department <i class='bx bx-up-arrow-alt'></i></button>
+              <button>actions <i class='bx bx-up-arrow-alt'></i></button>
+            </div>
+            <div>
+              <ul class="box__list" style="list-style-type: none; padding: 0 !important;">
+    
+              </ul>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal__box">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Employe Form</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body modal__body">
+
+        <form action="#" id="form" class="form modal__form">
+          <div class="modal__form-inner">
+            <div class="form__box">
+              <label class="box__label" for="name">name</label>
+              <input class="box__input nameinput" type="text" name="name" id="name" placeholder="Tom">
+              <p class="box__text nametext"></p>
+            </div>
+            <div class="form__box">
+              <label class="box__label" for="text">email adress</label>
+              <input class="box__input email" type="email" name="email" id="email" placeholder="email adress">
+              <p class="box__text box__text2"></p>
+            </div>
+              <div class="form__box">
+              <label class="box__label" for="number">phone number</label>
+              <input class="box__input number" type="number" name="number" id="number" placeholder="phone number">
+              <p class="box__text box__text3"></p>
+            </div>
+          </div>
+     
+          <div class="form__right">
+            <h3 class="form__title-inner">Gender</h3>
+            <div style="display: flex;">
+              <div class="box__radio">
+                <input class="radio" type="radio"> Male
+              </div>
+              <div class="box__radio">
+                <input class="radio" type="radio">Famale
+              </div>
+              <div class="box__radio">
+                <input class="radio" type="radio">Other
+              </div>
+            </div>
+            <div>
+              <select name="form__select " class ="form__select form-select" id="selectOne" aria-label="Default select example"  style="width:85%; margin: 0 0 20px 0" >
+                <option value="Development">Development</option>
+                <option value="None">None</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Accounting">Accounting</option>
+                <option value="Hr">Hr</option>
+              </select>
+            </div>
+            <div class="calendarInput" style="margin: 0 0 20px 0;">
+              <input class="calnInput form-control" type="data" value="Apr/22/2022">
+              <i class='bx bx-calendar'></i>
+            </div>
+            <div style ="display: flex;">
+              <input class="modal__input" type="checkbox">
+              <p class="modal__checkbox">Permanent Employee</p>
+            </div>
+            <button type="submit" class="btn box__submit" id="submit">Submit</button>
+            <button type="submit" class="btn box__submit">Reset</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- =======edit modal========= -->
+
+<div class="modal fade" id="staticBackdropedit" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal__box">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Employe Form</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body modal__body">
+
+        <form action="#" id="form2" class="form modal__form">
+          <div class="modal__form-inner">
+            <div class="form__box">
+              <label class="box__label" for="name">name</label>
+              <input class="box__input nameinput2" type="text" name="name" id="name" placeholder="Tom">
+              <p class="box__text nametext"></p>
+            </div>
+            <div class="form__box">
+              <label class="box__label" for="text">email adress</label>
+              <input class="box__input email2" type="email" name="email" id="email" placeholder="email adress">
+              <p class="box__text box__text2"></p>
+            </div>
+              <div class="form__box">
+              <label class="box__label" for="number">phone number</label>
+              <input class="box__input number2" type="number" name="number" id="number" placeholder="phone number">
+              <p class="box__text box__text3"></p>
+            </div>
+          </div>
+     
+          <div class="form__right">
+            <h3 class="form__title-inner">Gender</h3>
+            <div style="display: flex;">
+              <div class="box__radio">
+                <input class="radio" type="radio"> Male
+              </div>
+              <div class="box__radio">
+                <input class="radio" type="radio">Famale
+              </div>
+              <div class="box__radio">
+                <input class="radio" type="radio">Other
+              </div>
+            </div>
+            <div>
+              <select name="form__select " class ="form__select form-select" id="selectOne2" aria-label="Default select example"  style="width:85%; margin: 0 0 20px 0" >
+                <option value="Development">Development</option>
+                <option value="None">None</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Accounting">Accounting</option>
+                <option value="Hr">Hr</option>
+              </select>
+            </div>
+            <div class="calendarInput" style="margin: 0 0 20px 0;">
+              <input class="calnInput form-control" type="data" value="Apr/22/2022">
+              <i class='bx bx-calendar'></i>
+            </div>
+            <div style ="display: flex;">
+              <input class="modal__input" type="checkbox">
+              <p class="modal__checkbox">Permanent Employee</p>
+            </div>
+            <button type="submit" class="btn box__submit">Submit</button>
+            <button type="submit" class="btn box__submit">Reset</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
   <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
 </html>
