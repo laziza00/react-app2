@@ -190,16 +190,19 @@ body {
   font-size: 18px;
   font-weight: 500;
   text-transform: capitalize;
+  margin: 0 10px ;
 }
 .box__item-email {
   color: #253053;
   font-size: 18px;
   font-weight: 500;
+  margin: 0 10px ;
 }
 .box__item-num {
   color: #253053;
   font-size: 18px;
   font-weight: 500;
+  margin: 0 10px ;
 }
 .box__remove-btn {
   border: none;
