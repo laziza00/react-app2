@@ -62,13 +62,23 @@ function addItems(newArr) {
         <p class="box__item-email">${item.email}</p>
         <p class="box__item-num">${item.number}</p>
         <p class="box__item-email">${item.fcategory}</p>
+        <div style="display: flex">
         <button class="box__remove-btn" onclick="deleteItems(${item.id})">
-        <i class='bx bx-x'></i>
-        </button>
-        <button class="box__edit-btn"  onclick="editItems(${item.id})" data-bs-toggle="modal" 
-        data-bs-target="#staticBackdropedit">
-        <i class='bx bx-edit-alt'></i>
-        </button>
+            <i class='bx bx-x'></i>
+            </button>
+            <button class="box__edit-btn"  onclick="editItems(${item.id})" 
+            data-bs-toggle="modal" 
+            data-bs-target="#staticBackdropedit">
+            <i class='bx bx-edit-alt'></i>
+            </button>
+</div>
+        
+        
+        
+        
+        
+        
+        
 `
             box__list.appendChild(li)
     })

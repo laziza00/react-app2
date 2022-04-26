@@ -182,7 +182,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 0 15px 0;
+  padding: 5px 0;
+  border-bottom: 1px solid #666;
 }
 .box__item-name {
   color: #253053;
@@ -211,6 +212,7 @@ body {
   align-items: center;
   font-size: 25px;
   border-radius: 5px;
+  margin: 0 5px;
 }
 .box__edit-btn {
   border: none;
@@ -223,6 +225,7 @@ body {
   justify-content: center;
   font-size: 25px;
   border-radius: 5px;
+  margin: 0 5px;
 }
 
 
