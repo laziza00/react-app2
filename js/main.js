@@ -62,7 +62,7 @@ function addItems(newArr) {
         <p class="box__item-email">${item.email}</p>
         <p class="box__item-num">${item.number}</p>
         <p class="box__item-email">${item.fcategory}</p>
-        <div style="display: flex" align-items:center;   margin: 0 10px;>
+        <div style="display: flex" align-items:center; margin: 0 10px>
         <button class="box__remove-btn" onclick="deleteItems(${item.id})">
             <i class='bx bx-x'></i>
             </button>
@@ -71,16 +71,14 @@ function addItems(newArr) {
             data-bs-target="#staticBackdropedit">
             <i class='bx bx-edit-alt'></i>
             </button>
-        </div>     
+</div>     
+        
 `
             box__list.appendChild(li)
     })
 
     
 }
-
-
-
 
 
 let inputNameEdit = document.querySelector('.nameinput2')
@@ -197,72 +195,6 @@ inputNumber.addEventListener('keyup', (e) => {
          boxText3.innerHTML = e
 }
 })
-
-
-
-// inputNameEdit.addEventListener('keyup', (e) => {
-    // let userNameValue = inputNameEdit.value.trim().toLowerCase()
-// 
-    // try{
-        // //  if(userNameValue.match(/[a-z]/) !=null && userNameValue.match(/[!@#$%^&*]/)==null && userNameValue!= "" && userNameValue.match(/[0-9]/) ==null) {
-// 
-            // inputName.style.border ="1px solid green" 
-            // boxText1.style.color ="green"
-            // throw "Succes"
-        // }
-        // else {
-            // inputName.style.border ="1px solid red";
-            // boxText1.style.color ="red"
-            // throw "Error: Usernme cannot be blank"
-        // }
-    // }catch(e) {
-        // boxText1.innerHTML = e
-    // }
-// })
-// 
-// inputEamilEdit.addEventListener('keyup', (e) => {
-// 
-    // let emailValue = inputEamilEdit.value.trim().toLowerCase()
-// try {
-        // if(emailValue.includes("@")  && emailValue !="" || emailValue.match(/[0-9]/) !=null 
-// ) {
-// 
-            // inputEamil.style.border ="1px solid green"
-            // boxText2.style.color ="green"
-            // throw "Success";
-    // }
-    // else {
-        // inputEamil.style.border ="1px solid red"
-        // boxText2.style.color ="red"
-        // throw "Email be cannot be blank";
-    // }
-    // }catch(e) {
-    // boxText2.innerHTML = e
-// }
-// })
-// 
-// inputNumberEdit.addEventListener('keyup', (e) => {
-//  
-    // let numberValue = inputNumberEdit.value.trim()
-    // try {
-        // if(numberValue.includes("+") &&  numberValue != "" ||numberValue.match(/[0-9]/) 
-// !=null && numberValue.length<=12 ) {
-// 
-            // inputNumber.style.border="1px solid green"
-            // boxText3.style.color ="green"
-            // throw "Success";
-    // }
-    // else {
-        // inputNumber.style.border = "1px solid red"
-        // boxText3.style.color ="red"
-        // throw "number be cannot be blank";
-    // }
-    // }catch(e) {
-        //  boxText3.innerHTML = e
-// }
-// })
-
-
 
 
 let headerInput = document.querySelector('.header__input')
