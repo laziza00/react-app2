@@ -71,13 +71,7 @@ function addItems(newArr) {
             data-bs-target="#staticBackdropedit">
             <i class='bx bx-edit-alt'></i>
             </button>
-</div>
-        
-        
-        
-        
-        
-        
+</div>     
         
 `
             box__list.appendChild(li)
